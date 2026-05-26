@@ -158,15 +158,14 @@ tibble(
 #| label: fig-forest
 #| fig-cap: "Forest plot of OR (short vs long TTP) on mortality — primary pool. Each row is a single effect size; multi-arm studies appear multiple times. Pooled estimate from the Bayesian model in red."
 
-fig_h <- max(6, nrow(es_mort) * 0.18 + 2)
+fig_h <- max(6, nrow(es_mort) * 0.30 + 2)
 knitr::opts_current$set(fig.height = fig_h)
 
 forest_data <- es_mort |>
   arrange(yi) |>
   mutate(
     lbl = paste0(study_id,
-                 ifelse(arm_id == "all", "", paste0(" [", arm_id, "]")),
-                 " (", str_sub(outcome_type, 1, 8), ")"),
+                 ifelse(arm_id == "all", "", paste0(" [", arm_id, "]"))),
     lbl = make.unique(lbl, sep = " #"),
     lbl = factor(lbl, levels = lbl),
     or = exp(yi),
@@ -216,6 +215,7 @@ ggplot(bind_rows(forest_data, pooled_row),
        y = NULL, color = NULL) +
   theme_minimal(base_size = 9) +
   theme(legend.position = "bottom",
+        axis.text.y = element_text(size = 7, lineheight = 0.85),
         panel.grid.major.y = element_line(color = "gray92"),
         panel.grid.minor = element_blank())
 ```
