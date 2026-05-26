@@ -1,0 +1,107 @@
+---
+title: "Methods & PRISMA flow"
+date: today
+---
+
+# PRISMA 2020 flow
+
+![Updated PRISMA flow for v4 database](data/PRISMA_v4_update.svg){#fig-prisma width="100%"}
+
+# Search strategy
+
+Records were identified from five electronic databases on the original search date plus the May 2026 update:
+
+- **PubMed**
+- **Embase**
+- **Scopus**
+- **Cochrane Library**
+- **Web of Science**
+
+Combined yield: 4,605 records → 1,409 duplicates removed → 3,196 unique records after deduplication.
+
+Search strings, date ranges, and per-database counts are in `PROSPERO_TTP_protocol.md` in the project root.
+
+# Eligibility criteria
+
+## Strict (primary pool, n=100 studies)
+
+A study qualifies if **all** of the following hold:
+
+1. **Population**: adult bacteremia, candidemia, or other bloodstream infection confirmed by blood culture
+2. **Exposure**: TTP (time to blood culture positivity) measured by an automated continuous-monitoring system
+3. **Outcome**: at least one clinical outcome reported — mortality, persistent bacteremia, microbiological clearance, or relapse
+4. **Quantitative TTP↔outcome association**: 2×2 table by TTP category, OR/HR/RR with CI, or β-per-hour with SE
+
+Studies that report TTP and outcomes only descriptively (without a quantitative TTP↔outcome model) are excluded under the strict criterion.
+
+## Inclusive (sensitivity pool, n=140 studies)
+
+Loosens criterion (4): a paper qualifies if TTP and a clinical outcome are both reported in the same cohort, **even if not cross-tabulated**. Inclusive-only studies are flagged with `[INCLUSIVE_ONLY]` in `tbl_study.notes` and are used only in sensitivity analyses.
+
+## Standing exclusions (both pools)
+
+- Narrative review, case report (n<10), editorial, conference abstract only, study protocol
+- TTP not measured (e.g., duration-of-bacteremia in days, time-to-antibiotic, transit time)
+- TTP used solely as part of a CRBSI case definition (`[CONTAMINATED_TTP]` flag)
+- Population not BSI
+- Full text not in English and not extractable
+
+# Data extraction
+
+Two-table extraction into the project's master workbook `TTP_MetaAnalysis_Extraction_Complete_v4.xlsx`, with sheets:
+
+- `tbl_study` — study-level (design, country, dates, single/multi-center, funding, 6-domain QUIPS risk of bias)
+- `tbl_population` — arm-level demographics, pathogen class/species, infection source, severity, empiric Rx
+- `tbl_ttp` — arm-level TTP reporting (continuous/dichotomized/categorical), unit, mean/median/IQR, cutpoint
+- `tbl_outcomes` — outcome rows (one or more per arm) — events, totals, effect estimates, adjustment
+
+Independent second-pass QC was performed on the 43 new strict-pool extractions; 7 factual corrections were applied prior to analysis (see `QC_Verification_Report.md`).
+
+# Effect-size computation
+
+Computed in `R/01_prepare_data.R` using `metafor::escalc()`:
+
+| Preference | Method | metafor measure | Notes |
+|---|---|---|---|
+| 1st | 2×2 events by TTP category | `OR` | `add = 0.5, to = "only0"` zero-cell correction |
+| 2nd | Reported effect estimate + 95% CI | back-calc | log(OR/HR/RR); SE = (log(CI_hi) − log(CI_lo)) / 3.92 |
+| 3rd | Continuous per-hour | β or log(OR_per_hour) | Kept separate from 2×2/back-calc pool by `es_source` flag |
+
+# Bayesian random-effects meta-analysis
+
+## Model
+
+$$y_i \mid \text{SE}_i \sim \mathcal{N}(\mu + u_s,\, \text{SE}_i^2), \quad u_s \sim \mathcal{N}(0, \tau^2)$$
+
+## Priors
+
+| Parameter | Prior |
+|---|---|
+| Pooled log-OR ($\mu$) | $\mathcal{N}(0,1)$ |
+| Between-study SD ($\tau$) | Half-Cauchy$(0, 0.5)$ |
+| Moderator coefficients | $\mathcal{N}(0, 0.5)$ |
+
+## Sampling
+
+`brms` with the Stan backend: 4 chains × 4,000 iterations (1,000 warm-up), `adapt_delta = 0.99`, `max_treedepth = 12`. Convergence assessed by $\hat{R} < 1.01$ and bulk-ESS > 1,000.
+
+## Sensitivity analyses
+
+1. **Inclusive pool** (n=140) added to test robustness to lower-quality studies
+2. **Pathogen subgroups** (gram+ / gram−) via meta-regression
+3. **TTP cutpoint** as a meta-regression moderator (per-hour log-OR change)
+4. **Data source** — 2×2 vs back-calculated vs continuous
+5. **Adjustment status** — adjusted vs unadjusted reported estimates
+6. **Publication year trend** — per-year log-OR change
+
+# Software
+
+| Package | Used for |
+|---|---|
+| `brms` | Bayesian models (Stan backend) |
+| `metafor` | Effect-size computation, fixed-effects sanity checks |
+| `posterior` | Posterior summaries, $\hat{R}$ / ESS |
+| `bayesplot` | Diagnostic plots |
+| `ggdist` | Halfeye / interval plots |
+| `tidyverse` + `gt` + `patchwork` | Data wrangling, tables, layout |
+| `readxl` | Read workbook sheets |

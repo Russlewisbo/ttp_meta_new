@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="PRISMA 2020 flow diagram for the TTP meta-analysis update">
+  <title>PRISMA 2020 flow — TTP meta-analysis update</title>
+  <desc>Identification through inclusion: 4,605 records across 5 databases reduced via deduplication and screening to 302 full-text reviews, yielding 43 strict-pool and 40 inclusive-pool new studies appended to a 57-study baseline for a final analysis pool of 140 studies.</desc>
+
+  <!-- White background -->
+  <rect width="1200" height="1500" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrow-excl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="32" text-anchor="middle" font-size="18" font-weight="800" fill="#111827">
+    PRISMA 2020 — TTP meta-analysis update (v4 workbook)
+  </text>
+  <text x="600" y="54" text-anchor="middle" font-size="12" fill="#6b7280">
+    From 4,605 records across 5 databases to 140 studies in the analysis pool
+  </text>
+
+  <!-- Stage labels (left column) -->
+  <g font-size="12" font-weight="700" fill="#6b7280" text-anchor="start">
+    <text x="20" y="115">IDENTIFICATION</text>
+    <text x="20" y="365">SCREENING</text>
+    <text x="20" y="640">RETRIEVAL</text>
+    <text x="20" y="855">ELIGIBILITY</text>
+    <text x="20" y="1250">INCLUDED</text>
+  </g>
+
+  <!-- Vertical guide line down center -->
+  <line x1="170" y1="80" x2="170" y2="1460" stroke="#e5e7eb" stroke-dasharray="2,4"/>
+
+  <!-- ============ IDENTIFICATION ============ -->
+  <!-- 5 databases box -->
+  <g>
+    <rect x="380" y="80" width="440" height="86" rx="6" fill="#eff6ff" stroke="#1e40af" stroke-width="1.5"/>
+    <text x="600" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Records identified from 5 databases
+    </text>
+    <text x="600" y="125" text-anchor="middle" font-size="11" fill="#374151">
+      PubMed · Embase · Scopus · Cochrane · Web of Science
+    </text>
+    <text x="600" y="155" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">
+      n = 4,605
+    </text>
+  </g>
+
+  <!-- Arrow down to dedup -->
+  <line x1="600" y1="166" x2="600" y2="208" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Duplicates removed (side box, right) -->
+  <g>
+    <rect x="860" y="180" width="320" height="64" rx="6" fill="#fef3c7" stroke="#92400e" stroke-width="1.2"/>
+    <text x="1020" y="204" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">
+      Records removed before screening
+    </text>
+    <text x="1020" y="226" text-anchor="middle" font-size="14" font-weight="700" fill="#92400e">
+      Duplicates: n = 1,409
+    </text>
+  </g>
+  <!-- Arrow from main → duplicates side box -->
+  <line x1="820" y1="208" x2="858" y2="208" stroke="#9ca3af" stroke-width="1.2" marker-end="url(#arrow-excl)"/>
+  <line x1="600" y1="208" x2="820" y2="208" stroke="#9ca3af" stroke-width="1.2"/>
+
+  <!-- ============ SCREENING ============ -->
+  <!-- After dedup box -->
+  <g>
+    <rect x="380" y="248" width="440" height="68" rx="6" fill="#f9fafb" stroke="#111827" stroke-width="1.5"/>
+    <text x="600" y="273" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Records after duplicates removed
+    </text>
+    <text x="600" y="302" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">
+      n = 3,196
+    </text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="316" x2="600" y2="358" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Title/abstract screening box -->
+  <g>
+    <rect x="380" y="358" width="440" height="68" rx="6" fill="#f9fafb" stroke="#111827" stroke-width="1.5"/>
+    <text x="600" y="383" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Records screened (title / abstract)
+    </text>
+    <text x="600" y="412" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">
+      n = 3,196
+    </text>
+  </g>
+
+  <!-- Excluded at title/abstract (side box) -->
+  <g>
+    <rect x="860" y="358" width="320" height="68" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.2"/>
+    <text x="1020" y="383" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">
+      Records excluded
+    </text>
+    <text x="1020" y="412" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">
+      Title/abstract screening: n = 2,841
+    </text>
+  </g>
+  <line x1="820" y1="392" x2="858" y2="392" stroke="#9ca3af" stroke-width="1.2" marker-end="url(#arrow-excl)"/>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="426" x2="600" y2="468" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ============ RETRIEVAL ============ -->
+  <!-- Reports sought for retrieval -->
+  <g>
+    <rect x="380" y="468" width="440" height="68" rx="6" fill="#f9fafb" stroke="#111827" stroke-width="1.5"/>
+    <text x="600" y="493" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Reports sought for retrieval (screening pool)
+    </text>
+    <text x="600" y="522" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">
+      n = 355
+    </text>
+  </g>
+
+  <!-- Reports not retrieved (side box) -->
+  <g>
+    <rect x="860" y="468" width="320" height="68" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.2"/>
+    <text x="1020" y="491" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">
+      Reports not retrieved
+    </text>
+    <text x="1020" y="510" text-anchor="middle" font-size="11" fill="#7f1d1d">
+      Pre-screened as ineligible at
+    </text>
+    <text x="1020" y="525" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">
+      download triage: n = 53
+    </text>
+  </g>
+  <line x1="820" y1="502" x2="858" y2="502" stroke="#9ca3af" stroke-width="1.2" marker-end="url(#arrow-excl)"/>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="536" x2="600" y2="578" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Reports retrieved -->
+  <g>
+    <rect x="380" y="578" width="440" height="68" rx="6" fill="#f9fafb" stroke="#111827" stroke-width="1.5"/>
+    <text x="600" y="603" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Reports retrieved (PDFs in new_ttp_pdfs/)
+    </text>
+    <text x="600" y="632" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">
+      n = 307
+    </text>
+  </g>
+
+  <!-- Baseline duplicates skipped (side box) -->
+  <g>
+    <rect x="860" y="578" width="320" height="68" rx="6" fill="#f3f4f6" stroke="#374151" stroke-width="1.2"/>
+    <text x="1020" y="601" text-anchor="middle" font-size="12" font-weight="700" fill="#374151">
+      Baseline duplicates skipped
+    </text>
+    <text x="1020" y="618" text-anchor="middle" font-size="10" fill="#6b7280">
+      (Álvarez 2012, Bläckberg 2022/23, Cillóniz 2017, Martínez 2006)
+    </text>
+    <text x="1020" y="635" text-anchor="middle" font-size="14" font-weight="700" fill="#374151">
+      n = 5
+    </text>
+  </g>
+  <line x1="820" y1="612" x2="858" y2="612" stroke="#9ca3af" stroke-width="1.2" marker-end="url(#arrow-excl)"/>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="646" x2="600" y2="688" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ============ ELIGIBILITY ============ -->
+  <!-- Full-text review -->
+  <g>
+    <rect x="380" y="688" width="440" height="72" rx="6" fill="#f0f9ff" stroke="#0c4a6e" stroke-width="1.5"/>
+    <text x="600" y="713" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Reports assessed for eligibility (full-text)
+    </text>
+    <text x="600" y="744" text-anchor="middle" font-size="22" font-weight="800" fill="#111827">
+      n = 302
+    </text>
+  </g>
+
+  <!-- Arrow down to strict-pass split -->
+  <line x1="600" y1="760" x2="600" y2="800" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Strict-pass split: includes vs excludes -->
+  <g>
+    <rect x="380" y="800" width="440" height="72" rx="6" fill="#f9fafb" stroke="#111827" stroke-width="1.5"/>
+    <text x="600" y="825" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      First-pass full-text review (STRICT criteria)
+    </text>
+    <text x="600" y="855" text-anchor="middle" font-size="12" fill="#374151">
+      Required: quantitative TTP↔outcome association
+    </text>
+  </g>
+
+  <!-- Strict excludes (side box, right) -->
+  <g>
+    <rect x="860" y="800" width="320" height="280" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.2"/>
+    <text x="1020" y="823" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">
+      Excluded after full-text review
+    </text>
+    <text x="1020" y="845" text-anchor="middle" font-size="20" font-weight="800" fill="#b91c1c">
+      n = 259
+    </text>
+    <text x="1020" y="867" text-anchor="middle" font-size="10" fill="#7f1d1d">
+      Reasons (strict pass):
+    </text>
+    <g font-size="11" fill="#7f1d1d" text-anchor="start">
+      <text x="900" y="890">wrong_design (review, abstract, case report)</text>
+      <text x="1130" y="890" text-anchor="end" font-weight="700">104</text>
+      <text x="900" y="908">no_ttp (TTP not measured)</text>
+      <text x="1130" y="908" text-anchor="end" font-weight="700">65</text>
+      <text x="900" y="926">no_assoc (no TTP↔outcome model)</text>
+      <text x="1130" y="926" text-anchor="end" font-weight="700">54</text>
+      <text x="900" y="944">no_outcome (no clinical outcome)</text>
+      <text x="1130" y="944" text-anchor="end" font-weight="700">29</text>
+      <text x="900" y="962">duplicate</text>
+      <text x="1130" y="962" text-anchor="end" font-weight="700">5</text>
+      <text x="900" y="980">not_bsi</text>
+      <text x="1130" y="980" text-anchor="end" font-weight="700">2</text>
+    </g>
+    <line x1="900" y1="998" x2="1140" y2="998" stroke="#fca5a5"/>
+    <text x="900" y="1018" font-size="11" font-weight="700" fill="#b91c1c">Subtotal excluded (strict):</text>
+    <text x="1130" y="1018" text-anchor="end" font-size="11" font-weight="700" fill="#b91c1c">259</text>
+    <text x="900" y="1042" font-size="10" font-style="italic" fill="#7f1d1d">↓ 54 no_assoc papers re-screened</text>
+    <text x="900" y="1058" font-size="10" font-style="italic" fill="#7f1d1d">↓ under inclusive criteria (next stage)</text>
+  </g>
+  <!-- Arrow from main to exclude box -->
+  <line x1="820" y1="836" x2="858" y2="836" stroke="#9ca3af" stroke-width="1.2" marker-end="url(#arrow-excl)"/>
+
+  <!-- Strict include arrow down -->
+  <line x1="600" y1="872" x2="600" y2="912" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Strict include box -->
+  <g>
+    <rect x="380" y="912" width="440" height="68" rx="6" fill="#fef9c3" stroke="#a16207" stroke-width="1.5"/>
+    <text x="600" y="937" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Strict-pool included (primary analysis)
+    </text>
+    <text x="600" y="966" text-anchor="middle" font-size="22" font-weight="800" fill="#a16207">
+      n = 43
+    </text>
+  </g>
+
+  <!-- Secondary pass: inclusive re-screen of 54 no_assoc -->
+  <!-- Curved arrow from exclude box back to a re-screen box -->
+  <path d="M 1020 1080 Q 1020 1110 800 1115" stroke="#9ca3af" stroke-width="1.2" fill="none" marker-end="url(#arrow-excl)" stroke-dasharray="4,3"/>
+
+  <!-- Inclusive re-screen box -->
+  <g>
+    <rect x="380" y="1010" width="440" height="74" rx="6" fill="#f9fafb" stroke="#111827" stroke-width="1.5"/>
+    <text x="600" y="1035" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Inclusive re-screen of `no_assoc` excludes
+    </text>
+    <text x="600" y="1055" text-anchor="middle" font-size="11" fill="#374151">
+      Relaxed: TTP + clinical outcome both reported in cohort
+    </text>
+    <text x="600" y="1077" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">
+      n = 54 papers re-assessed
+    </text>
+  </g>
+
+  <!-- Arrow down from inclusive re-screen -->
+  <line x1="600" y1="1084" x2="600" y2="1124" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Re-screen still-excluded -->
+  <g>
+    <rect x="860" y="1110" width="320" height="100" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.2"/>
+    <text x="1020" y="1132" text-anchor="middle" font-size="11" font-weight="700" fill="#b91c1c">
+      Re-screen still excluded
+    </text>
+    <text x="1020" y="1152" text-anchor="middle" font-size="16" font-weight="800" fill="#b91c1c">n = 14</text>
+    <g font-size="10" fill="#7f1d1d" text-anchor="start">
+      <text x="880" y="1172">no_outcome 7 · no_ttp 4</text>
+      <text x="880" y="1188">wrong_design 2 · ttp-is-outcome 1</text>
+    </g>
+  </g>
+  <line x1="820" y1="1140" x2="858" y2="1140" stroke="#9ca3af" stroke-width="1.2" marker-end="url(#arrow-excl)"/>
+
+  <!-- Inclusive flipped-include box -->
+  <g>
+    <rect x="380" y="1124" width="440" height="68" rx="6" fill="#fff7ed" stroke="#c2410c" stroke-width="1.5"/>
+    <text x="600" y="1149" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Inclusive-pool included (secondary / sensitivity)
+    </text>
+    <text x="600" y="1178" text-anchor="middle" font-size="22" font-weight="800" fill="#c2410c">
+      n = 40
+    </text>
+  </g>
+
+  <!-- ============ INCLUDED (final) ============ -->
+  <!-- Two arrows converging to final pool from strict and inclusive -->
+  <path d="M 470 980 L 470 1235" stroke="#374151" stroke-width="1.5" fill="none"/>
+  <path d="M 470 1235 L 540 1235" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 730 1192 L 730 1235 L 660 1235" stroke="#374151" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Baseline thesis pool feeds in too -->
+  <g>
+    <rect x="100" y="1196" width="270" height="68" rx="6" fill="#f3f4f6" stroke="#374151" stroke-width="1.2"/>
+    <text x="235" y="1219" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">
+      Baseline studies (thesis pool)
+    </text>
+    <text x="235" y="1248" text-anchor="middle" font-size="18" font-weight="800" fill="#111827">
+      n = 57
+    </text>
+  </g>
+  <path d="M 370 1235 L 540 1235" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Final v4 pool box -->
+  <g>
+    <rect x="540" y="1200" width="320" height="120" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="2.5"/>
+    <text x="700" y="1228" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">
+      Studies in v4 analysis workbook
+    </text>
+    <text x="700" y="1265" text-anchor="middle" font-size="32" font-weight="900" fill="#15803d">
+      n = 140
+    </text>
+    <text x="700" y="1290" text-anchor="middle" font-size="11" fill="#166534">
+      57 baseline + 43 strict + 40 inclusive
+    </text>
+    <text x="700" y="1308" text-anchor="middle" font-size="10" fill="#166534">
+      tbl_study · tbl_population · tbl_ttp · tbl_outcomes
+    </text>
+  </g>
+
+  <!-- Right-side analysis-pool annotations -->
+  <g>
+    <rect x="900" y="1224" width="280" height="72" rx="6" fill="#f9fafb" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="1040" y="1247" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">
+      Downstream analysis pools
+    </text>
+    <text x="1040" y="1267" text-anchor="middle" font-size="10" fill="#374151">
+      Primary: 57 + 43 = 100 (strict only)
+    </text>
+    <text x="1040" y="1283" text-anchor="middle" font-size="10" fill="#374151">
+      Sensitivity: 100 + 40 = 140 (incl. inclusive)
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <g font-size="10" fill="#6b7280">
+    <text x="60" y="1400" font-weight="700" fill="#111827">Notes:</text>
+    <text x="60" y="1418">• Strict criterion requires a quantitative TTP↔outcome association (2×2, OR/HR with CI, or beta-per-hour).</text>
+    <text x="60" y="1432">• Inclusive criterion accepts TTP + clinical outcome both reported in the cohort, even if not analyzed together. New rows flagged [INCLUSIVE_ONLY] in tbl_study.notes.</text>
+    <text x="60" y="1446">• 54 papers excluded as `no_assoc` in the strict pass were re-screened under inclusive criteria; 40 flipped to include, 14 remained excluded.</text>
+    <text x="60" y="1460">• 5 PDFs in the retrieval set were duplicates of already-extracted baseline studies and were skipped (not re-extracted).</text>
+    <text x="60" y="1474">• 53 pool entries had no PDF downloaded — these were deliberately triaged out at the retrieval stage as obviously ineligible (conference abstracts, non-English, methods-only).</text>
+  </g>
+</svg>

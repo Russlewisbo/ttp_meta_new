@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "clinical_failure.html",
+    "href": "clinical_failure.html",
+    "title": "TTP and Clinical Failure Outcomes",
+    "section": "",
+    "text": "In the v1 analysis (n=57 studies, Feb 2026), the clinical failure analysis was deemed not feasible: only 4 studies had usable data, with severe directionality contradictions and one extreme outlier (OR≈1115 in Melling 2019). The v4 update adds 43 new strict-pool studies, several of which report persistent bacteremia, microbiological clearance, or relapse outcomes. This page revisits feasibility.\n\n\n\n\n\n\nTable 1: Available effect sizes per clinical-failure outcome (strict pool).\n\n\n\n\n\n\n\n\n\nOutcome\nEffect sizes\nUnique studies\n\n\n\n\nPersistent bacteremia\n12\n12\n\n\nMicrobiological clearance\n4\n3\n\n\nRelapse\n0\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: Forest plot of OR (short vs long TTP) for persistent bacteremia. NB: many studies coded under ‘persistent_bacteremia’ actually report endocarditis (the Codebook’s outcome_type enum lacks ‘endocarditis’). Review outcome_definition in each row before interpretation.\n\n\n\n\n\n\n\n\nThe persistent bacteremia pool mixes genuinely different endpoints — true persistent/extended bacteremia, endocarditis/IE diagnoses, and other outcomes (e.g. line removal failure, mortality). We examine whether the definition group moderates the pooled effect.\n\n\nMeta-regression: def_group moderator on persistent bacteremia\n\n                         Estimate Est.Error   Q2.5 Q97.5\nIntercept                   0.368     0.220 -0.044 0.853\ndef_groupendocarditis_IE    0.596     0.354 -0.151 1.234\ndef_groupother              0.249     0.369 -0.479 0.964\n\n\n\n\n\n\n\n\nFigure 2: Forest plot of persistent bacteremia OR, faceted by outcome-definition group.\n\n\n\n\n\n\n\n\n\n\n\nNoteLow-power caveat\n\n\n\nThe meta-regression has very few observations per group (≤6), so the moderator estimates are imprecise and should be treated as exploratory. The faceted forest plot is intended to highlight definitional heterogeneity, not to provide reliable subgroup-specific pooled effects.\n\n\n\n\n\n\n\nMicrobiological clearance — pooled OR 1.70 [0.24, 9.51] from 4 effect sizes (3 studies).\n\n\n\n\n\n\n\nRelapse: only 0 effect sizes — insufficient for meta-analysis."
+  },
+  {
+    "objectID": "clinical_failure.html#available-data-strict-pool-n100-studies",
+    "href": "clinical_failure.html#available-data-strict-pool-n100-studies",
+    "title": "TTP and Clinical Failure Outcomes",
+    "section": "",
+    "text": "Table 1: Available effect sizes per clinical-failure outcome (strict pool).\n\n\n\n\n\n\n\n\n\nOutcome\nEffect sizes\nUnique studies\n\n\n\n\nPersistent bacteremia\n12\n12\n\n\nMicrobiological clearance\n4\n3\n\n\nRelapse\n0\n0"
+  },
+  {
+    "objectID": "clinical_failure.html#persistent-bacteremia-most-reported-clinical-failure-outcome",
+    "href": "clinical_failure.html#persistent-bacteremia-most-reported-clinical-failure-outcome",
+    "title": "TTP and Clinical Failure Outcomes",
+    "section": "",
+    "text": "Figure 1: Forest plot of OR (short vs long TTP) for persistent bacteremia. NB: many studies coded under ‘persistent_bacteremia’ actually report endocarditis (the Codebook’s outcome_type enum lacks ‘endocarditis’). Review outcome_definition in each row before interpretation."
+  },
+  {
+    "objectID": "clinical_failure.html#microbiological-clearance",
+    "href": "clinical_failure.html#microbiological-clearance",
+    "title": "TTP and Clinical Failure Outcomes",
+    "section": "",
+    "text": "Microbiological clearance — pooled OR 1.70 [0.24, 9.51] from 4 effect sizes (3 studies)."
+  },
+  {
+    "objectID": "clinical_failure.html#relapse",
+    "href": "clinical_failure.html#relapse",
+    "title": "TTP and Clinical Failure Outcomes",
+    "section": "",
+    "text": "Relapse: only 0 effect sizes — insufficient for meta-analysis."
+  },
+  {
+    "objectID": "clinical_failure.html#subset-analysis-persistent-bacteremia-by-outcome-definition",
+    "href": "clinical_failure.html#subset-analysis-persistent-bacteremia-by-outcome-definition",
+    "title": "TTP and Clinical Failure Outcomes",
+    "section": "",
+    "text": "The persistent bacteremia pool mixes genuinely different endpoints — true persistent/extended bacteremia, endocarditis/IE diagnoses, and other outcomes (e.g. line removal failure, mortality). We examine whether the definition group moderates the pooled effect.\n\n\nMeta-regression: def_group moderator on persistent bacteremia\n\n                         Estimate Est.Error   Q2.5 Q97.5\nIntercept                   0.368     0.220 -0.044 0.853\ndef_groupendocarditis_IE    0.596     0.354 -0.151 1.234\ndef_groupother              0.249     0.369 -0.479 0.964\n\n\n\n\n\n\n\n\nFigure 2: Forest plot of persistent bacteremia OR, faceted by outcome-definition group.\n\n\n\n\n\n\n\n\n\n\n\nNoteLow-power caveat\n\n\n\nThe meta-regression has very few observations per group (≤6), so the moderator estimates are imprecise and should be treated as exploratory. The faceted forest plot is intended to highlight definitional heterogeneity, not to provide reliable subgroup-specific pooled effects."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "",
+    "text": "Primary analysis (strict pool): 100 studies contributing 72 mortality effect sizes.\nSensitivity analysis (strict + inclusive pool): 140 studies, 84 effect sizes.\n\n\n\n\n\n\nImportantPrimary result (strict pool)\n\n\n\nPooled odds ratio for mortality (short vs long TTP):\n\nOR = 2.06 (95% CrI: 1.67–2.55)\n\nProbability that shorter TTP increases mortality: 100.0%\n\nBetween-study heterogeneity: I² = 62%, τ = 0.69\n\n\n\n\n\n\n\n\n\n\nTipSensitivity result (n=140)\n\n\n\nIncluding the 40 inclusive-pool studies: OR = 1.92 (95% CrI: 1.58–2.35), P(harm) = 100.0%, I² = 63%."
+  },
+  {
+    "objectID": "index.html#data-source",
+    "href": "index.html#data-source",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "2.1 Data source",
+    "text": "2.1 Data source\nThe analysis dataset is data/TTP_MetaAnalysis_Extraction_Complete_v4.xlsx. Effect sizes (log odds ratios) were computed using metafor::escalc():\n\n2×2 tables when events/totals by TTP category are reported (preferred when available)\nBack-calculated from reported OR/HR/RR with 95% CI when 2×2 unavailable\nPer-hour estimates (continuous TTP) reported separately\n\nThe full effect-size pipeline is in R/01_prepare_data.R."
+  },
+  {
+    "objectID": "index.html#bayesian-random-effects-meta-analysis",
+    "href": "index.html#bayesian-random-effects-meta-analysis",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "2.2 Bayesian random-effects meta-analysis",
+    "text": "2.2 Bayesian random-effects meta-analysis\nPrimary model (specified in R/02_fit_models.R):\n\\[y_i \\mid \\text{SE}_i \\sim \\mathcal{N}\\!\\left(\\mu + u_s,\\,\\text{SE}_i^2\\right),\\quad u_s \\sim \\mathcal{N}(0,\\tau^2)\\]\nwith weakly-informative priors \\(\\mu \\sim \\mathcal{N}(0,1)\\), \\(\\tau \\sim \\text{Half-Cauchy}(0,0.5)\\), moderator coefficients \\(\\mathcal{N}(0,0.5)\\). Fitted with brms 4×4000 iterations (1000 warm-up), adapt_delta = 0.99, max_treedepth = 12."
+  },
+  {
+    "objectID": "index.html#prisma-flow",
+    "href": "index.html#prisma-flow",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "2.3 PRISMA flow",
+    "text": "2.3 PRISMA flow\n\n\n\n\n\n\nFigure 1: Updated PRISMA 2020 flow"
+  },
+  {
+    "objectID": "index.html#overall-pooled-effect",
+    "href": "index.html#overall-pooled-effect",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "3.1 Overall pooled effect",
+    "text": "3.1 Overall pooled effect\n\n\n\n\nTable 1: Pooled effect of short vs long TTP on mortality (OR &gt; 1 = short TTP harmful). Primary pool only (strict criterion).\n\n\n\n\n\n\n\n\n\nParameter\nValue\n\n\n\n\nMedian OR (short vs long TTP)\n2.06\n\n\n95% credible interval\n[1.67, 2.55]\n\n\nP(short TTP harmful)\n100.0%\n\n\nBetween-study SD (τ)\n0.69\n\n\nHeterogeneity (I²)\n62%"
+  },
+  {
+    "objectID": "index.html#forest-plot",
+    "href": "index.html#forest-plot",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "3.2 Forest plot",
+    "text": "3.2 Forest plot\n\n\n\n\n\n\n\n\nFigure 2: Forest plot of OR (short vs long TTP) on mortality — primary pool. Each row is a single effect size; multi-arm studies appear multiple times. Pooled estimate from the Bayesian model in red."
+  },
+  {
+    "objectID": "index.html#posterior-density-of-pooled-or",
+    "href": "index.html#posterior-density-of-pooled-or",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "3.3 Posterior density of pooled OR",
+    "text": "3.3 Posterior density of pooled OR\n\n\n\n\n\n\n\n\nFigure 3: Posterior density of the pooled OR (short vs long TTP). The vertical red line marks no effect (OR = 1)."
+  },
+  {
+    "objectID": "index.html#diagnostics",
+    "href": "index.html#diagnostics",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "3.4 Diagnostics",
+    "text": "3.4 Diagnostics\n\n\n\n\nTable 2: Convergence diagnostics for the primary pooled model.\n\n\n\n\n\n\n\n\n\nParameter\nR̂\nESS_bulk\n\n\n\n\nb_Intercept\n1.003\n1429\n\n\nsd_study_id__Intercept\n1.002\n2043\n\n\nsigma\nNA\nNA\n\n\nIntercept\n1.003\n1429\n\n\nr_study_id[Alvarez2012,Intercept]\n1.001\n10557\n\n\nr_study_id[Bae2021,Intercept]\n1.000\n12229\n\n\nr_study_id[Balaji2024,Intercept]\n1.002\n2836\n\n\nr_study_id[Barr2022,Intercept]\n1.000\n11548\n\n\nr_study_id[Blackberg2022,Intercept]\n1.001\n11388\n\n\nr_study_id[Blackberg2023,Intercept]\n1.001\n9980\n\n\nr_study_id[Bo2011,Intercept]\n1.000\n7848\n\n\nr_study_id[Chavez2022,Intercept]\n1.003\n1426\n\n\nr_study_id[Chen2018,Intercept]\n1.000\n6414\n\n\nr_study_id[Chen2020,Intercept]\n1.000\n14148\n\n\nr_study_id[Chen2023,Intercept]\n1.000\n13576\n\n\nr_study_id[Cheng2022,Intercept]\n1.000\n13904\n\n\nr_study_id[Cilloniz2017,Intercept]\n1.000\n7851\n\n\nr_study_id[Deguchi2024,Intercept]\n1.000\n12353\n\n\nr_study_id[Fenoll2022,Intercept]\n1.000\n10865\n\n\nr_study_id[Hamilton2021,Intercept]\n1.003\n1432\n\n\nr_study_id[Hou2023,Intercept]\n1.001\n7382\n\n\nr_study_id[Hsieh2022,Intercept]\n1.001\n3480\n\n\nr_study_id[IrigoyenSierakowski2024,Intercept]\n1.000\n16462\n\n\nr_study_id[Jayabalakrishnan2022,Intercept]\n1.000\n16215\n\n\nr_study_id[Ji2020,Intercept]\n1.000\n6152\n\n\nr_study_id[Kahn2021,Intercept]\n1.000\n6419\n\n\nr_study_id[Keighley2023,Intercept]\n1.000\n16962\n\n\nr_study_id[Kim2010,Intercept]\n1.001\n5819\n\n\nr_study_id[Kim2013,Intercept]\n1.000\n9157\n\n\nr_study_id[Laupland2022,Intercept]\n1.002\n1610\n\n\nr_study_id[Laupland2024,Intercept]\n1.003\n1478\n\n\nr_study_id[Liao2009,Intercept]\n1.000\n8344\n\n\nr_study_id[Lin2016,Intercept]\n1.000\n13218\n\n\nr_study_id[Marco2025,Intercept]\n1.001\n4825\n\n\nr_study_id[Marra2006,Intercept]\n1.000\n13785\n\n\nr_study_id[Minejima2019,Intercept]\n1.001\n8153\n\n\nr_study_id[Nunes2013,Intercept]\n1.000\n13928\n\n\nr_study_id[Ok2013,Intercept]\n1.000\n12816\n\n\nr_study_id[Palmer2013,Intercept]\n1.001\n15976\n\n\nr_study_id[PapadimitriouOlivgeris2023,Intercept]\n1.000\n5065\n\n\nr_study_id[Paquette2021,Intercept]\n1.003\n1576\n\n\nr_study_id[Peralta2007,Intercept]\n1.000\n10735\n\n\nr_study_id[PerezRodriguez2024,Intercept]\n1.000\n10843\n\n\nr_study_id[Prinsloo2023,Intercept]\n1.000\n9664\n\n\nr_study_id[PuertaAlcalde2019,Intercept]\n1.001\n6856\n\n\nr_study_id[Recio2020,Intercept]\n1.003\n1490\n\n\nr_study_id[Rojas2013,Intercept]\n1.001\n14005\n\n\nr_study_id[Rolo2022,Intercept]\n1.000\n8569\n\n\nr_study_id[Sachu2024,Intercept]\n1.000\n11112\n\n\nr_study_id[Savithri2011,Intercept]\n1.000\n16329\n\n\nr_study_id[Simeon2019,Intercept]\n1.001\n5714\n\n\nr_study_id[Sowden2008,Intercept]\n1.000\n12698\n\n\nr_study_id[Takahashi2022,Intercept]\n1.000\n13238\n\n\nr_study_id[Tang2017,Intercept]\n1.001\n7028\n\n\nr_study_id[Taur2010,Intercept]\n1.003\n1440\n\n\nr_study_id[Tsai2025,Intercept]\n1.003\n1462\n\n\nr_study_id[Turkeltaub2024,Intercept]\n1.000\n14546\n\n\nr_study_id[Willmann2013,Intercept]\n1.000\n12819\n\n\nr_study_id[Zhang2016,Intercept]\n1.000\n7888\n\n\nr_study_id[Zhang2020,Intercept]\n1.000\n9920\n\n\nr_study_id[Zhang2021,Intercept]\n1.001\n7441\n\n\nr_study_id[Zouggari2022,Intercept]\n1.000\n10868"
+  },
+  {
+    "objectID": "index.html#including-the-inclusive-pool-studies-n140",
+    "href": "index.html#including-the-inclusive-pool-studies-n140",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "6.1 Including the inclusive-pool studies (n=140)",
+    "text": "6.1 Including the inclusive-pool studies (n=140)\n\n\n\n\n\n\n\n\nFigure 6: Posterior densities of pooled OR — primary pool vs sensitivity pool (with inclusive-only studies added)."
+  },
+  {
+    "objectID": "index.html#other-moderators",
+    "href": "index.html#other-moderators",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "6.2 Other moderators",
+    "text": "6.2 Other moderators\n\n\n\n\nTable 4: All moderator and sensitivity analyses (primary pool). Δ log-OR is the change in pooled log-OR per unit of the moderator; negative values shrink the short-TTP harm signal.\n\n\n\n\n\n\n\n\n\nModerator\nΔ log-OR\n95% CrI\nP(direction)\n\n\n\n\nTTP cutpoint (per 10 h)\n-0.355\n[-0.561, -0.153]\n99.9%\n\n\nPathogen: Gram+ vs Gram−\n-0.500\n[-1.016, 0.024]\n97.0%\n\n\nAdjustment: adjusted vs unadjusted\n0.123\n[-0.385, 0.624]\n68.7%\n\n\nPublication year (per 5 yr)\n-0.203\n[-0.414, 0.001]\n97.5%"
+  },
+  {
+    "objectID": "rob.html",
+    "href": "rob.html",
+    "title": "Risk of bias (QUIPS)",
+    "section": "",
+    "text": "Risk of bias was assessed with the QUIPS tool (Hayden et al. 2013), scoring six domains 1 (low), 2 (moderate), 3 (high):\n\nStudy participation (selection bias)\nStudy confounding (multivariable adjustment for key confounders)\nOutcome measurement (ascertainment / objectivity)\nStatistical analysis (appropriateness, reporting completeness)\nAttrition (loss to follow-up, missing data)\nPrognostic factor measurement (TTP measurement quality)\n\nOverall rating follows QUIPS guidance — worst-domain-dominates, not arithmetic mean. See references/QUIPS_scoring_guide.md in the extraction skill for the project-specific rubric."
+  },
+  {
+    "objectID": "rob.html#traffic-light-plot",
+    "href": "rob.html#traffic-light-plot",
+    "title": "Risk of bias (QUIPS)",
+    "section": "2.1 Traffic-light plot",
+    "text": "2.1 Traffic-light plot\n\n\n\n\n\n\n\n\nFigure 1: QUIPS traffic-light plot. Each row is a study; columns are domains. Green = low, amber = moderate, red = high risk of bias."
+  },
+  {
+    "objectID": "rob.html#summary-plot-domain-by-rating",
+    "href": "rob.html#summary-plot-domain-by-rating",
+    "title": "Risk of bias (QUIPS)",
+    "section": "2.2 Summary plot (domain-by-rating)",
+    "text": "2.2 Summary plot (domain-by-rating)\n\n\n\n\n\n\n\n\nFigure 2: Distribution of QUIPS judgments across studies, per domain."
+  }
+]

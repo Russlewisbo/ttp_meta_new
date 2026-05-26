@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "data/*.xlsx"
+    - "data/*.svg"
+    - "data/*.png"
+
+website:
+  title: "TTP Meta-Analysis (v4 update)"
+  description: "Time-to-positivity of blood cultures and clinical outcomes in bacteremia — updated Bayesian meta-analysis using the v4 extraction database (100 studies, 57 baseline + 43 new strict-pool extractions; n=140 in sensitivity analyses including 40 inclusive-pool studies)."
+  page-navigation: true
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: "Mortality (main)"
+      - href: clinical_failure.qmd
+        text: "Clinical failure"
+      - href: methods.qmd
+        text: "Methods & PRISMA"
+      - href: rob.qmd
+        text: "Risk of bias"
+    right:
+      - icon: github
+        href: https://github.com/USERNAME/REPONAME
+  page-footer: "Updated 2026 · Bayesian random-effects meta-analysis · brms + Stan"
+
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    code-fold: true
+    code-summary: "Show R code"
+    code-tools: true
+    theme:
+      light: cosmo
+      dark: darkly
+    embed-resources: false
+    fig-width: 10
+    fig-height: 6
+    fig-dpi: 200
+    df-print: kable
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto
