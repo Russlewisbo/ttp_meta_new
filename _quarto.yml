@@ -7,12 +7,15 @@ project:
     - "data/*.png"
 
 website:
+  site-url: https://russlewisbo.github.io/ttp_meta_new
   title: "TTP Meta-Analysis (v4 update)"
   description: "Time-to-positivity of blood cultures and clinical outcomes in bacteremia — updated Bayesian meta-analysis using the v4 extraction database (100 studies, 57 baseline + 43 new strict-pool extractions; n=140 in sensitivity analyses including 40 inclusive-pool studies)."
   page-navigation: true
   navbar:
     background: primary
     left:
+      - href: abstract.qmd
+        text: "Abstract"
       - href: index.qmd
         text: "Mortality (main)"
       - href: clinical_failure.qmd
@@ -23,7 +26,7 @@ website:
         text: "Risk of bias"
     right:
       - icon: github
-        href: https://github.com/USERNAME/REPONAME
+        href: https://github.com/Russlewisbo/ttp_meta_new
   page-footer: "Updated 2026 · Bayesian random-effects meta-analysis · brms + Stan"
 
 format:
