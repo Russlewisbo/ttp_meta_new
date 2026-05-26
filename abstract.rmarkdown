@@ -211,3 +211,4 @@ tibble(OR = base_post$OR_draws) |>
   labs(x = "Pooled OR (short vs long TTP)", y = "Posterior density") +
   theme_minimal()
 ```
+
