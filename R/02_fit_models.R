@@ -75,6 +75,14 @@ fit_all_models <- function(es_mort, cache_dir = "_brms_cache") {
       priors  = c(.prior_intercept, .prior_tau),
       name = "fit_gram_neg", cache_dir = cache_dir)
 
+  es_fungal <- es_mort |> filter(pathogen_class == "fungal")
+  if (nrow(es_fungal) >= 3)
+    fits$fit_fungal <- fit_one(
+      es_fungal,
+      formula = bf(yi | se(sei) ~ 1 + (1 | study_id)),
+      priors  = c(.prior_intercept, .prior_tau),
+      name = "fit_fungal", cache_dir = cache_dir)
+
   # 4. Pathogen meta-regression
   es_metareg <- es_mort |>
     filter(pathogen_class %in% c("gram_positive", "gram_negative")) |>

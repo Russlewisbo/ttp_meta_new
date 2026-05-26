@@ -158,7 +158,7 @@ tibble(
 #| label: fig-forest
 #| fig-cap: "Forest plot of OR (short vs long TTP) on mortality — primary pool. Each row is a single effect size; multi-arm studies appear multiple times. Pooled estimate from the Bayesian model in red."
 
-fig_h <- max(6, nrow(es_mort) * 0.30 + 2)
+fig_h <- max(6, nrow(es_mort) * 0.55 + 2)
 knitr::opts_current$set(fig.height = fig_h)
 
 forest_data <- es_mort |>

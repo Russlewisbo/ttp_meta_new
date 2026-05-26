@@ -1,0 +1,15 @@
+{
+  "hash": "5adeb01d4d43d885782206459325c1cd",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Structured Abstract\"\nsubtitle: \"Time-to-Positivity and Mortality in Bacteremia: Updated Bayesian Meta-Analysis\"\ndate: today\nformat:\n  html:\n    fig-width: 10\n    toc: false\nexecute:\n  cache: true\n  echo: false\n  warning: false\n  message: false\n---\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\n## Introduction\n\nTime-to-positivity (TTP) — the interval from blood culture incubation to automated detection of bacterial growth — has been proposed as a prognostic marker in bacteremia. Shorter TTP may reflect higher pathogen burden or virulence, and has been hypothesised to predict mortality. We performed an updated Bayesian random-effects meta-analysis to quantify this association.\n\n## Methods\n\nFive electronic databases were searched through May 2026 (3,196 unique records after deduplication). Studies were eligible if they reported a quantitative TTP–mortality association in adults with bloodstream infection confirmed by automated blood culture monitoring. Log odds ratios were derived from 2×2 tables or back-calculated from reported estimates. A Bayesian hierarchical model with weakly-informative priors was fitted using Stan; heterogeneity was quantified with τ and I². Risk of bias was assessed with the QUIPS tool.\n\n## Results\n\n72 mortality effect sizes from 100 studies were pooled (Figure 2).\n   Short TTP was associated with higher mortality (OR = 2.06, 95% CrI 1.67–2.55;\n   P(OR > 1) = 100%).\n   Between-study heterogeneity was substantial (I² = 62%, τ = 0.69;\n   Figure 3).\n   The 95% prediction interval for a new study (0.49–8.69) crossed the null,\n   reflecting heterogeneity.\n   Results were consistent in the 140-study sensitivity pool\n   (OR = 1.92, 95% CrI 1.58–2.35).\n\n## Conclusions\n\nShort TTP is consistently associated with increased mortality risk in bacteremia across 100 studies; however, substantial between-study heterogeneity limits direct generalisation to individual clinical settings. Prospective studies with pre-specified TTP thresholds are needed to establish clinical utility.\n\n---\n\n### Figure 2 — Forest plot\n\n\n::: {.cell}\n::: {.cell-output-display}\n![Forest plot of OR (short vs long TTP) on mortality — primary pool (n=100 studies). Each row is a single effect size. Pooled Bayesian estimate in red; solid bar = 95% CrI, dashed bar = 95% prediction interval.](abstract_files/figure-html/fig-forest-abstract-1.png){#fig-forest-abstract width=2000}\n:::\n:::\n\n\n### Figure 3 — Posterior density of pooled OR\n\n\n::: {.cell}\n::: {.cell-output-display}\n![Posterior density of the pooled OR (short vs long TTP). The vertical dashed line marks no effect (OR = 1).](abstract_files/figure-html/fig-posterior-abstract-1.png){#fig-posterior-abstract width=2000}\n:::\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

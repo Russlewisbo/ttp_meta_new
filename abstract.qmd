@@ -1,0 +1,161 @@
+---
+title: "Structured Abstract"
+subtitle: "Time-to-Positivity and Mortality in Bacteremia: Updated Bayesian Meta-Analysis"
+date: today
+format:
+  html:
+    fig-width: 10
+    toc: false
+execute:
+  cache: true
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(brms)
+  library(metafor)
+  library(posterior)
+  library(ggdist)
+  library(gt)
+})
+source("R/01_prepare_data.R")
+source("R/02_fit_models.R")
+
+es_all  <- prepare_effect_sizes("data/TTP_MetaAnalysis_Extraction_Complete_v4.xlsx",
+                                include_inclusive_pool = FALSE,
+                                drop_contaminated_ttp  = TRUE)
+es_mort <- es_for_outcome(es_all, "mortality")
+
+es_all_inc  <- prepare_effect_sizes("data/TTP_MetaAnalysis_Extraction_Complete_v4.xlsx",
+                                    include_inclusive_pool = TRUE,
+                                    drop_contaminated_ttp  = TRUE)
+es_mort_inc <- es_for_outcome(es_all_inc, "mortality")
+
+fits     <- fit_all_models(es_mort,     cache_dir = "_brms_cache/primary")
+fits_inc <- fit_all_models(es_mort_inc, cache_dir = "_brms_cache/sensitivity")
+```
+
+```{r summaries}
+#| cache: false
+source("R/02_fit_models.R")
+base_post <- pooled_summary(fits$fit_base)
+inc_post  <- pooled_summary(fits_inc$fit_base)
+```
+
+## Introduction
+
+Time-to-positivity (TTP) — the interval from blood culture incubation to automated detection of bacterial growth — has been proposed as a prognostic marker in bacteremia. Shorter TTP may reflect higher pathogen burden or virulence, and has been hypothesised to predict mortality. We performed an updated Bayesian random-effects meta-analysis to quantify this association.
+
+## Methods
+
+Five electronic databases were searched through May 2026 (3,196 unique records after deduplication). Studies were eligible if they reported a quantitative TTP–mortality association in adults with bloodstream infection confirmed by automated blood culture monitoring. Log odds ratios were derived from 2×2 tables or back-calculated from reported estimates. A Bayesian hierarchical model with weakly-informative priors was fitted using Stan; heterogeneity was quantified with τ and I². Risk of bias was assessed with the QUIPS tool.
+
+## Results
+
+```{r results-inline}
+#| results: asis
+n_es      <- nrow(es_mort)
+n_studies <- attr(es_all, "n_studies")
+
+cat(sprintf(
+  "%d mortality effect sizes from %d studies were pooled (Figure 2).
+   Short TTP was associated with higher mortality (OR\u202f=\u202f%.2f, 95%%\u202fCrI\u202f%.2f\u2013%.2f;
+   P(OR\u202f>\u202f1)\u202f=\u202f%.0f%%).
+   Between-study heterogeneity was substantial (I²\u202f=\u202f%.0f%%, τ\u202f=\u202f%.2f;
+   Figure 3).
+   The 95%% prediction interval for a new study (%.2f\u2013%.2f) crossed the null,
+   reflecting heterogeneity.
+   Results were consistent in the %d-study sensitivity pool
+   (OR\u202f=\u202f%.2f, 95%%\u202fCrI\u202f%.2f\u2013%.2f).\n",
+  n_es, n_studies,
+  base_post$median_OR, base_post$ci_OR[1], base_post$ci_OR[2],
+  base_post$p_harm * 100,
+  base_post$median_i2, base_post$median_tau,
+  base_post$pi_OR[1], base_post$pi_OR[2],
+  attr(es_all_inc, "n_studies"),
+  inc_post$median_OR, inc_post$ci_OR[1], inc_post$ci_OR[2]
+))
+```
+
+## Conclusions
+
+Short TTP is consistently associated with increased mortality risk in bacteremia across 100 studies; however, substantial between-study heterogeneity limits direct generalisation to individual clinical settings. Prospective studies with pre-specified TTP thresholds are needed to establish clinical utility.
+
+---
+
+### Figure 2 — Forest plot
+
+```{r fig-forest-abstract}
+#| label: fig-forest-abstract
+#| fig-cap: "Forest plot of OR (short vs long TTP) on mortality — primary pool (n=100 studies). Each row is a single effect size. Pooled Bayesian estimate in red; solid bar = 95% CrI, dashed bar = 95% prediction interval."
+
+fig_h <- max(6, nrow(es_mort) * 0.55 + 2)
+knitr::opts_current$set(fig.height = fig_h)
+
+forest_data <- es_mort |>
+  arrange(yi) |>
+  mutate(
+    lbl = paste0(study_id,
+                 ifelse(arm_id == "all", "", paste0(" [", arm_id, "]"))),
+    lbl = make.unique(lbl, sep = " #"),
+    lbl = factor(lbl, levels = lbl),
+    or      = exp(yi),
+    ci_low  = exp(yi - 1.96 * sei),
+    ci_high = exp(yi + 1.96 * sei),
+    type = "Study"
+  )
+
+pooled_row <- tibble(
+  lbl = "POOLED (Bayesian)", or = base_post$median_OR,
+  ci_low = base_post$ci_OR[1], ci_high = base_post$ci_OR[2], type = "Pooled"
+)
+pi_row <- tibble(
+  lbl = "POOLED (Bayesian)",
+  pi_low  = base_post$pi_OR[1],
+  pi_high = base_post$pi_OR[2]
+)
+
+forest_data$lbl <- factor(forest_data$lbl,
+                           levels = c("POOLED (Bayesian)", levels(forest_data$lbl)))
+pooled_row$lbl  <- factor(pooled_row$lbl, levels = levels(forest_data$lbl))
+pi_row$lbl      <- factor(pi_row$lbl,     levels = levels(forest_data$lbl))
+
+ggplot(bind_rows(forest_data, pooled_row), aes(x = or, y = lbl, color = type)) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "gray50") +
+  geom_point(size = 2.5) +
+  geom_errorbar(aes(xmin = pmax(ci_low, 0.05), xmax = pmin(ci_high, 50)),
+                width = 0.25, linewidth = 0.7, orientation = "y") +
+  geom_errorbar(data = pi_row,
+                aes(y = lbl, xmin = pmax(pi_low, 0.05), xmax = pmin(pi_high, 50)),
+                width = 0.15, linewidth = 0.7, linetype = "dashed",
+                color = "darkred", inherit.aes = FALSE) +
+  scale_color_manual(values = c("Study" = "steelblue", "Pooled" = "darkred")) +
+  scale_x_log10(breaks = c(0.1, 0.25, 0.5, 1, 2, 4, 8, 16, 32),
+                limits  = c(0.05, 50)) +
+  labs(subtitle = "Solid red bar = 95% CrI; dashed red bar = 95% prediction interval",
+       x = "OR, short vs long TTP (log scale)", y = NULL, color = NULL) +
+  theme_minimal(base_size = 9) +
+  theme(legend.position  = "bottom",
+        axis.text.y      = element_text(size = 7, lineheight = 0.85),
+        panel.grid.major.y = element_line(color = "gray92"),
+        panel.grid.minor = element_blank())
+```
+
+### Figure 3 — Posterior density of pooled OR
+
+```{r fig-posterior-abstract}
+#| label: fig-posterior-abstract
+#| fig-cap: "Posterior density of the pooled OR (short vs long TTP). The vertical dashed line marks no effect (OR = 1)."
+#| fig-height: 4
+tibble(OR = base_post$OR_draws) |>
+  ggplot(aes(x = OR)) +
+  stat_halfeye(fill = "#1f78b4", alpha = 0.6) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "red") +
+  scale_x_continuous(limits = c(0.5, 6), breaks = seq(0.5, 6, 0.5)) +
+  labs(x = "Pooled OR (short vs long TTP)", y = "Posterior density") +
+  theme_minimal()
+```
