@@ -74,7 +74,7 @@
     "href": "index.html#overall-pooled-effect",
     "title": "Time-to-Positivity and Mortality in Bacteremia",
     "section": "3.1 Overall pooled effect",
-    "text": "3.1 Overall pooled effect\n\n\n\n\nTable 1: Pooled effect of short vs long TTP on mortality (OR &gt; 1 = short TTP harmful). Primary pool only (strict criterion).\n\n\n\n\n\n\n\n\n\nParameter\nValue\n\n\n\n\nMedian OR (short vs long TTP)\n2.06\n\n\n95% credible interval\n[1.67, 2.55]\n\n\nP(short TTP harmful)\n100.0%\n\n\nBetween-study SD (τ)\n0.69\n\n\nHeterogeneity (I²)\n62%"
+    "text": "3.1 Overall pooled effect\n\n\n\n\nTable 1: Pooled effect of short vs long TTP on mortality (OR &gt; 1 = short TTP harmful). Primary pool only (strict criterion).\n\n\n\n\n\n\n\n\n\nParameter\nValue\n\n\n\n\nMedian OR (short vs long TTP)\n2.06\n\n\n95% credible interval\n[1.67, 2.55]\n\n\n95% prediction interval (new study)\n[0.51, 8.24]\n\n\nP(short TTP harmful)\n100.0%\n\n\nBetween-study SD (τ)\n0.69\n\n\nHeterogeneity (I²)\n62%"
   },
   {
     "objectID": "index.html#forest-plot",
@@ -95,21 +95,21 @@
     "href": "index.html#diagnostics",
     "title": "Time-to-Positivity and Mortality in Bacteremia",
     "section": "3.4 Diagnostics",
-    "text": "3.4 Diagnostics\n\n\n\n\nTable 2: Convergence diagnostics for the primary pooled model.\n\n\n\n\n\n\n\n\n\nParameter\nR̂\nESS_bulk\n\n\n\n\nb_Intercept\n1.003\n1429\n\n\nsd_study_id__Intercept\n1.002\n2043\n\n\nsigma\nNA\nNA\n\n\nIntercept\n1.003\n1429\n\n\nr_study_id[Alvarez2012,Intercept]\n1.001\n10557\n\n\nr_study_id[Bae2021,Intercept]\n1.000\n12229\n\n\nr_study_id[Balaji2024,Intercept]\n1.002\n2836\n\n\nr_study_id[Barr2022,Intercept]\n1.000\n11548\n\n\nr_study_id[Blackberg2022,Intercept]\n1.001\n11388\n\n\nr_study_id[Blackberg2023,Intercept]\n1.001\n9980\n\n\nr_study_id[Bo2011,Intercept]\n1.000\n7848\n\n\nr_study_id[Chavez2022,Intercept]\n1.003\n1426\n\n\nr_study_id[Chen2018,Intercept]\n1.000\n6414\n\n\nr_study_id[Chen2020,Intercept]\n1.000\n14148\n\n\nr_study_id[Chen2023,Intercept]\n1.000\n13576\n\n\nr_study_id[Cheng2022,Intercept]\n1.000\n13904\n\n\nr_study_id[Cilloniz2017,Intercept]\n1.000\n7851\n\n\nr_study_id[Deguchi2024,Intercept]\n1.000\n12353\n\n\nr_study_id[Fenoll2022,Intercept]\n1.000\n10865\n\n\nr_study_id[Hamilton2021,Intercept]\n1.003\n1432\n\n\nr_study_id[Hou2023,Intercept]\n1.001\n7382\n\n\nr_study_id[Hsieh2022,Intercept]\n1.001\n3480\n\n\nr_study_id[IrigoyenSierakowski2024,Intercept]\n1.000\n16462\n\n\nr_study_id[Jayabalakrishnan2022,Intercept]\n1.000\n16215\n\n\nr_study_id[Ji2020,Intercept]\n1.000\n6152\n\n\nr_study_id[Kahn2021,Intercept]\n1.000\n6419\n\n\nr_study_id[Keighley2023,Intercept]\n1.000\n16962\n\n\nr_study_id[Kim2010,Intercept]\n1.001\n5819\n\n\nr_study_id[Kim2013,Intercept]\n1.000\n9157\n\n\nr_study_id[Laupland2022,Intercept]\n1.002\n1610\n\n\nr_study_id[Laupland2024,Intercept]\n1.003\n1478\n\n\nr_study_id[Liao2009,Intercept]\n1.000\n8344\n\n\nr_study_id[Lin2016,Intercept]\n1.000\n13218\n\n\nr_study_id[Marco2025,Intercept]\n1.001\n4825\n\n\nr_study_id[Marra2006,Intercept]\n1.000\n13785\n\n\nr_study_id[Minejima2019,Intercept]\n1.001\n8153\n\n\nr_study_id[Nunes2013,Intercept]\n1.000\n13928\n\n\nr_study_id[Ok2013,Intercept]\n1.000\n12816\n\n\nr_study_id[Palmer2013,Intercept]\n1.001\n15976\n\n\nr_study_id[PapadimitriouOlivgeris2023,Intercept]\n1.000\n5065\n\n\nr_study_id[Paquette2021,Intercept]\n1.003\n1576\n\n\nr_study_id[Peralta2007,Intercept]\n1.000\n10735\n\n\nr_study_id[PerezRodriguez2024,Intercept]\n1.000\n10843\n\n\nr_study_id[Prinsloo2023,Intercept]\n1.000\n9664\n\n\nr_study_id[PuertaAlcalde2019,Intercept]\n1.001\n6856\n\n\nr_study_id[Recio2020,Intercept]\n1.003\n1490\n\n\nr_study_id[Rojas2013,Intercept]\n1.001\n14005\n\n\nr_study_id[Rolo2022,Intercept]\n1.000\n8569\n\n\nr_study_id[Sachu2024,Intercept]\n1.000\n11112\n\n\nr_study_id[Savithri2011,Intercept]\n1.000\n16329\n\n\nr_study_id[Simeon2019,Intercept]\n1.001\n5714\n\n\nr_study_id[Sowden2008,Intercept]\n1.000\n12698\n\n\nr_study_id[Takahashi2022,Intercept]\n1.000\n13238\n\n\nr_study_id[Tang2017,Intercept]\n1.001\n7028\n\n\nr_study_id[Taur2010,Intercept]\n1.003\n1440\n\n\nr_study_id[Tsai2025,Intercept]\n1.003\n1462\n\n\nr_study_id[Turkeltaub2024,Intercept]\n1.000\n14546\n\n\nr_study_id[Willmann2013,Intercept]\n1.000\n12819\n\n\nr_study_id[Zhang2016,Intercept]\n1.000\n7888\n\n\nr_study_id[Zhang2020,Intercept]\n1.000\n9920\n\n\nr_study_id[Zhang2021,Intercept]\n1.001\n7441\n\n\nr_study_id[Zouggari2022,Intercept]\n1.000\n10868"
+    "text": "3.4 Diagnostics\n\n\n\n\nTable 2: Convergence diagnostics for the primary pooled model.\n\n\n\n\n\n\n\n\n\nParameter\nR̂\nESS_bulk\n\n\n\n\nb_Intercept\n1.003\n1429\n\n\nsd_study_id__Intercept\n1.002\n2043\n\n\nsigma\nNA\nNA\n\n\nIntercept\n1.003\n1429\n\n\nr_study_id[Alvarez2012,Intercept]\n1.001\n10557\n\n\nr_study_id[Bae2021,Intercept]\n1.000\n12229\n\n\nr_study_id[Balaji2024,Intercept]\n1.002\n2836\n\n\nr_study_id[Barr2022,Intercept]\n1.000\n11548\n\n\nr_study_id[Blackberg2022,Intercept]\n1.001\n11388\n\n\nr_study_id[Blackberg2023,Intercept]\n1.001\n9980\n\n\nr_study_id[Bo2011,Intercept]\n1.000\n7848\n\n\nr_study_id[Chavez2022,Intercept]\n1.003\n1426\n\n\nr_study_id[Chen2018,Intercept]\n1.000\n6414\n\n\nr_study_id[Chen2020,Intercept]\n1.000\n14148\n\n\nr_study_id[Chen2023,Intercept]\n1.000\n13576\n\n\nr_study_id[Cheng2022,Intercept]\n1.000\n13904\n\n\nr_study_id[Cilloniz2017,Intercept]\n1.000\n7851\n\n\nr_study_id[Deguchi2024,Intercept]\n1.000\n12353\n\n\nr_study_id[Fenoll2022,Intercept]\n1.000\n10865\n\n\nr_study_id[Hamilton2021,Intercept]\n1.003\n1432\n\n\nr_study_id[Hou2023,Intercept]\n1.001\n7382\n\n\nr_study_id[Hsieh2022,Intercept]\n1.001\n3480\n\n\nr_study_id[IrigoyenSierakowski2024,Intercept]\n1.000\n16462\n\n\nr_study_id[Jayabalakrishnan2022,Intercept]\n1.000\n16215\n\n\nr_study_id[Ji2020,Intercept]\n1.000\n6152\n\n\nr_study_id[Kahn2021,Intercept]\n1.000\n6419\n\n\nr_study_id[Keighley2023,Intercept]\n1.000\n16962\n\n\nr_study_id[Kim2010,Intercept]\n1.001\n5819\n\n\nr_study_id[Kim2013,Intercept]\n1.000\n9157\n\n\nr_study_id[Laupland2022,Intercept]\n1.002\n1610\n\n\nr_study_id[Laupland2024,Intercept]\n1.003\n1478\n\n\nr_study_id[Liao2009,Intercept]\n1.000\n8344\n\n\nr_study_id[Lin2016,Intercept]\n1.000\n13218\n\n\nr_study_id[Marco2025,Intercept]\n1.001\n4825\n\n\nr_study_id[Marra2006,Intercept]\n1.000\n13785\n\n\nr_study_id[Minejima2019,Intercept]\n1.001\n8153\n\n\nr_study_id[Nunes2013,Intercept]\n1.000\n13928\n\n\nr_study_id[Ok2013,Intercept]\n1.000\n12816\n\n\nr_study_id[Palmer2013,Intercept]\n1.001\n15976\n\n\nr_study_id[PapadimitriouOlivgeris2023,Intercept]\n1.000\n5065\n\n\nr_study_id[Paquette2021,Intercept]\n1.003\n1576\n\n\nr_study_id[Peralta2007,Intercept]\n1.000\n10735\n\n\nr_study_id[PerezRodriguez2024,Intercept]\n1.000\n10843\n\n\nr_study_id[Prinsloo2023,Intercept]\n1.000\n9664\n\n\nr_study_id[PuertaAlcalde2019,Intercept]\n1.001\n6856\n\n\nr_study_id[Recio2020,Intercept]\n1.003\n1490\n\n\nr_study_id[Rojas2013,Intercept]\n1.001\n14005\n\n\nr_study_id[Rolo2022,Intercept]\n1.000\n8569\n\n\nr_study_id[Sachu2024,Intercept]\n1.000\n11112\n\n\nr_study_id[Savithri2011,Intercept]\n1.000\n16329\n\n\nr_study_id[Simeon2019,Intercept]\n1.001\n5714\n\n\nr_study_id[Sowden2008,Intercept]\n1.000\n12698\n\n\nr_study_id[Takahashi2022,Intercept]\n1.000\n13238\n\n\nr_study_id[Tang2017,Intercept]\n1.001\n7028\n\n\nr_study_id[Taur2010,Intercept]\n1.003\n1440\n\n\nr_study_id[Tsai2025,Intercept]\n1.003\n1462\n\n\nr_study_id[Turkeltaub2024,Intercept]\n1.000\n14546\n\n\nr_study_id[Willmann2013,Intercept]\n1.000\n12819\n\n\nr_study_id[Zhang2016,Intercept]\n1.000\n7888\n\n\nr_study_id[Zhang2020,Intercept]\n1.000\n9920\n\n\nr_study_id[Zhang2021,Intercept]\n1.001\n7441\n\n\nr_study_id[Zouggari2022,Intercept]\n1.000\n10868\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Trace plots for key parameters of the primary pooled model. Well-mixed chains (caterpillar appearance) indicate good convergence.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: Rank histograms for key parameters. Uniform bars across all chains indicate no chain-mixing issues.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: R̂ dot plot for all parameters of the primary pooled model. All values should fall below 1.01 (dashed line)."
   },
   {
     "objectID": "index.html#including-the-inclusive-pool-studies-n140",
     "href": "index.html#including-the-inclusive-pool-studies-n140",
     "title": "Time-to-Positivity and Mortality in Bacteremia",
-    "section": "6.1 Including the inclusive-pool studies (n=140)",
-    "text": "6.1 Including the inclusive-pool studies (n=140)\n\n\n\n\n\n\n\n\nFigure 6: Posterior densities of pooled OR — primary pool vs sensitivity pool (with inclusive-only studies added)."
+    "section": "7.1 Including the inclusive-pool studies (n=140)",
+    "text": "7.1 Including the inclusive-pool studies (n=140)\n\n\n\n\n\n\n\n\nFigure 10: Posterior densities of pooled OR — primary pool vs sensitivity pool (with inclusive-only studies added)."
   },
   {
     "objectID": "index.html#other-moderators",
     "href": "index.html#other-moderators",
     "title": "Time-to-Positivity and Mortality in Bacteremia",
-    "section": "6.2 Other moderators",
-    "text": "6.2 Other moderators\n\n\n\n\nTable 4: All moderator and sensitivity analyses (primary pool). Δ log-OR is the change in pooled log-OR per unit of the moderator; negative values shrink the short-TTP harm signal.\n\n\n\n\n\n\n\n\n\nModerator\nΔ log-OR\n95% CrI\nP(direction)\n\n\n\n\nTTP cutpoint (per 10 h)\n-0.355\n[-0.561, -0.153]\n99.9%\n\n\nPathogen: Gram+ vs Gram−\n-0.500\n[-1.016, 0.024]\n97.0%\n\n\nAdjustment: adjusted vs unadjusted\n0.123\n[-0.385, 0.624]\n68.7%\n\n\nPublication year (per 5 yr)\n-0.203\n[-0.414, 0.001]\n97.5%"
+    "section": "7.4 Other moderators",
+    "text": "7.4 Other moderators\n\n\n\n\nTable 8: All moderator and sensitivity analyses (primary pool). Δ log-OR is the change in pooled log-OR per unit of the moderator; negative values shrink the short-TTP harm signal.\n\n\n\n\n\n\n\n\n\nModerator\nΔ log-OR\n95% CrI\nP(direction)\n\n\n\n\nTTP cutpoint (per 10 h)\n-0.355\n[-0.561, -0.153]\n99.9%\n\n\nPathogen: Gram+ vs Gram−\n-0.500\n[-1.016, 0.024]\n97.0%\n\n\nAdjustment: adjusted vs unadjusted\n0.123\n[-0.385, 0.624]\n68.7%\n\n\nPublication year (per 5 yr)\n-0.203\n[-0.414, 0.001]\n97.5%"
   },
   {
     "objectID": "rob.html",
@@ -131,5 +131,89 @@
     "title": "Risk of bias (QUIPS)",
     "section": "2.2 Summary plot (domain-by-rating)",
     "text": "2.2 Summary plot (domain-by-rating)\n\n\n\n\n\n\n\n\nFigure 2: Distribution of QUIPS judgments across studies, per domain."
+  },
+  {
+    "objectID": "index.html#convergence-sensitivity-pool",
+    "href": "index.html#convergence-sensitivity-pool",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "7.3 Convergence — sensitivity pool",
+    "text": "7.3 Convergence — sensitivity pool\n\n\n\n\n\n\n\n\nFigure 12: Trace plots for key parameters of the sensitivity (n=140) model.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13: Rank histograms for key parameters of the sensitivity (n=140) model.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 14: R̂ dot plot for all parameters of the sensitivity (n=140) model. All values should fall below 1.01 (dashed line)."
+  },
+  {
+    "objectID": "methods.html",
+    "href": "methods.html",
+    "title": "Methods & PRISMA flow",
+    "section": "",
+    "text": "Figure 1: Updated PRISMA flow for v4 database"
+  },
+  {
+    "objectID": "methods.html#strict-primary-pool-n100-studies",
+    "href": "methods.html#strict-primary-pool-n100-studies",
+    "title": "Methods & PRISMA flow",
+    "section": "3.1 Strict (primary pool, n=100 studies)",
+    "text": "3.1 Strict (primary pool, n=100 studies)\nA study qualifies if all of the following hold:\n\nPopulation: adult bacteremia, candidemia, or other bloodstream infection confirmed by blood culture\nExposure: TTP (time to blood culture positivity) measured by an automated continuous-monitoring system\nOutcome: at least one clinical outcome reported — mortality, persistent bacteremia, microbiological clearance, or relapse\nQuantitative TTP↔︎outcome association: 2×2 table by TTP category, OR/HR/RR with CI, or β-per-hour with SE\n\nStudies that report TTP and outcomes only descriptively (without a quantitative TTP↔︎outcome model) are excluded under the strict criterion."
+  },
+  {
+    "objectID": "methods.html#inclusive-sensitivity-pool-n140-studies",
+    "href": "methods.html#inclusive-sensitivity-pool-n140-studies",
+    "title": "Methods & PRISMA flow",
+    "section": "3.2 Inclusive (sensitivity pool, n=140 studies)",
+    "text": "3.2 Inclusive (sensitivity pool, n=140 studies)\nLoosens criterion (4): a paper qualifies if TTP and a clinical outcome are both reported in the same cohort, even if not cross-tabulated. Inclusive-only studies are flagged with [INCLUSIVE_ONLY] in tbl_study.notes and are used only in sensitivity analyses."
+  },
+  {
+    "objectID": "methods.html#standing-exclusions-both-pools",
+    "href": "methods.html#standing-exclusions-both-pools",
+    "title": "Methods & PRISMA flow",
+    "section": "3.3 Standing exclusions (both pools)",
+    "text": "3.3 Standing exclusions (both pools)\n\nNarrative review, case report (n&lt;10), editorial, conference abstract only, study protocol\nTTP not measured (e.g., duration-of-bacteremia in days, time-to-antibiotic, transit time)\nTTP used solely as part of a CRBSI case definition ([CONTAMINATED_TTP] flag)\nPopulation not BSI\nFull text not in English and not extractable"
+  },
+  {
+    "objectID": "methods.html#model",
+    "href": "methods.html#model",
+    "title": "Methods & PRISMA flow",
+    "section": "6.1 Model",
+    "text": "6.1 Model\n\\[y_i \\mid \\text{SE}_i \\sim \\mathcal{N}(\\mu + u_s,\\, \\text{SE}_i^2), \\quad u_s \\sim \\mathcal{N}(0, \\tau^2)\\]"
+  },
+  {
+    "objectID": "methods.html#priors",
+    "href": "methods.html#priors",
+    "title": "Methods & PRISMA flow",
+    "section": "6.2 Priors",
+    "text": "6.2 Priors\n\n\n\nParameter\nPrior\n\n\n\n\nPooled log-OR (\\(\\mu\\))\n\\(\\mathcal{N}(0,1)\\)\n\n\nBetween-study SD (\\(\\tau\\))\nHalf-Cauchy\\((0, 0.5)\\)\n\n\nModerator coefficients\n\\(\\mathcal{N}(0, 0.5)\\)"
+  },
+  {
+    "objectID": "methods.html#sampling",
+    "href": "methods.html#sampling",
+    "title": "Methods & PRISMA flow",
+    "section": "6.3 Sampling",
+    "text": "6.3 Sampling\nbrms with the Stan backend: 4 chains × 4,000 iterations (1,000 warm-up), adapt_delta = 0.99, max_treedepth = 12. Convergence assessed by \\(\\hat{R} &lt; 1.01\\) and bulk-ESS &gt; 1,000."
+  },
+  {
+    "objectID": "methods.html#sensitivity-analyses",
+    "href": "methods.html#sensitivity-analyses",
+    "title": "Methods & PRISMA flow",
+    "section": "6.4 Sensitivity analyses",
+    "text": "6.4 Sensitivity analyses\n\nInclusive pool (n=140) added to test robustness to lower-quality studies\nPathogen subgroups (gram+ / gram−) via meta-regression\nTTP cutpoint as a meta-regression moderator (per-hour log-OR change)\nData source — 2×2 vs back-calculated vs continuous\nAdjustment status — adjusted vs unadjusted reported estimates\nPublication year trend — per-year log-OR change"
+  },
+  {
+    "objectID": "index.html#contour-enhanced-funnel-plot",
+    "href": "index.html#contour-enhanced-funnel-plot",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "6.1 Contour-enhanced funnel plot",
+    "text": "6.1 Contour-enhanced funnel plot\n\n\n\n\n\n\n\n\nFigure 9: Contour-enhanced funnel plot (primary pool, mortality). Studies in white zones are not statistically significant at the labelled threshold; shaded outer zones indicate increasing levels of significance. Asymmetry toward the right (short TTP harmful) would suggest positive-result publication bias."
+  },
+  {
+    "objectID": "index.html#eggers-test",
+    "href": "index.html#eggers-test",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "6.2 Egger’s test",
+    "text": "6.2 Egger’s test\n\n\n\n\nTable 4: Egger’s regression test for funnel-plot asymmetry (primary pool, mortality). The intercept tests whether effect-size magnitude varies with precision in a manner inconsistent with sampling error alone.\n\n\n\n\n\n\n\n\n\nStatistic\nValue\n\n\n\n\nIntercept (bias term)\n-0.010\n\n\n95% CI\n[-0.034, 0.014]\n\n\nt-statistic\n6.190\n\n\ndf\n70\n\n\np-value\n0.000\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteInterpreting Egger’s test in this context\n\n\n\nEgger’s test has known limitations when between-study heterogeneity is high (as here): the test can flag asymmetry that reflects genuine heterogeneity rather than publication bias. An intercept materially different from zero should be followed up by examining whether small-study effects correlate with identifiable moderators (e.g., pathogen class, adjustment status) before attributing asymmetry to selective reporting."
+  },
+  {
+    "objectID": "index.html#data-source-es_source",
+    "href": "index.html#data-source-es_source",
+    "title": "Time-to-Positivity and Mortality in Bacteremia",
+    "section": "7.2 Data source (es_source)",
+    "text": "7.2 Data source (es_source)\nDo pooled ORs differ depending on how the effect size was derived — from a 2×2 table vs a back-calculated reported estimate?\n\n\n\n\nTable 5: Effect sizes in the primary pool by derivation source.\n\n\n\n\n\n\n\n\n\nES source\nN\n%\n\n\n\n\nReported (adjusted)\n15\n20.8%\n\n\nReported (unadjusted)\n8\n11.1%\n\n\n2×2 table\n49\n68.1%\n\n\n\n\n\n\n\n\n\n\n\n\n\nTable 6: Pooled OR by effect-size source. The 2×2 and reported-only estimates come from separate Bayesian RE models; contrasts come from the joint meta-regression (two_by_two as reference).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: Posterior densities of pooled OR by effect-size source. Substantial overlap indicates the signal is not driven by one derivation method.\n\n\n\n\n\n\n\n\nTable 7: Meta-regression contrasts vs the 2×2-derived reference. A positive Δ log-OR indicates the reported-estimate sources show a larger short-TTP harm signal than the 2×2 pool."
   }
 ]

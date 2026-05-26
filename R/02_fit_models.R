@@ -114,7 +114,21 @@ fit_all_models <- function(es_mort, cache_dir = "_brms_cache") {
       priors  = c(.prior_intercept, .prior_tau),
       name = "fit_reported", cache_dir = cache_dir)
 
-  # 8. Adjustment status
+  # 8. Effect-size source meta-regression (two_by_two as reference)
+  es_src <- es_mort |>
+    filter(es_source %in% c("two_by_two", "reported_adjusted", "reported_unadjusted")) |>
+    mutate(es_source_f = factor(es_source,
+                                levels = c("two_by_two",
+                                           "reported_adjusted",
+                                           "reported_unadjusted")))
+  if (length(unique(es_src$es_source_f)) >= 2 && nrow(es_src) >= 6)
+    fits$fit_es_source <- fit_one(
+      es_src,
+      formula = bf(yi | se(sei) ~ 1 + es_source_f + (1 | study_id)),
+      priors  = c(.prior_intercept, .prior_tau, .prior_mod),
+      name    = "fit_es_source", cache_dir = cache_dir)
+
+  # 9. Adjustment status
   es_adj <- es_mort |>
     filter(es_source %in% c("reported_adjusted", "reported_unadjusted")) |>
     mutate(adjusted_lbl = factor(if_else(es_source == "reported_adjusted",
@@ -147,6 +161,8 @@ pooled_summary <- function(fit) {
   # I² via Higgins method using a "typical" within-study variance
   vi_typical <- mean(fit$data$sei^2, na.rm = TRUE)
   i2 <- tau^2 / (tau^2 + vi_typical) * 100
+  # 95% prediction interval: marginal predictive distribution for a new study
+  pi_logOR <- rnorm(length(logOR), mean = logOR, sd = tau)
   list(
     logOR_draws = logOR,
     OR_draws    = exp(logOR),
@@ -154,6 +170,7 @@ pooled_summary <- function(fit) {
     i2_draws    = i2,
     median_OR   = median(exp(logOR)),
     ci_OR       = quantile(exp(logOR), c(0.025, 0.975)),
+    pi_OR       = quantile(exp(pi_logOR), c(0.025, 0.975)),
     p_harm      = mean(exp(logOR) > 1),
     median_tau  = median(tau),
     median_i2   = median(i2)
