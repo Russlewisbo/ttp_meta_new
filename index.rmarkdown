@@ -673,7 +673,6 @@ The analyses above summarise how the *dichotomised* TTP cutpoint moderates the p
 #| label: continuous-dr-setup
 #| include: false
 library(lme4)
-library(MASS)
 
 # ---- Log-normal TTP distribution helpers ----
 make_E_ttp <- function(mu, sigma) {
